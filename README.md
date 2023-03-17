@@ -44,10 +44,7 @@ Fonte dos dados:
   
 ## Funcionalidades
 
-
-@@@@ continuar
-
-- A analise foi conduzida para, ao final, proporcionar uma webapp que fará previsões sobre o valor de seguro contra incêndio cobrado, de acordo com a área do imóvel.
+- A analise foi conduzida para, ao final, proporcionar a recomendação de compra, por cliente, com grande probabilidade.
 
 ## Visualizar
 
@@ -60,41 +57,36 @@ Fonte dos dados:
 ## Resultados
 
 
-Como resultado da análise, idenfificamos, as correlações entre as variáveis, para iniciar a modelagem da regressão linear:
+Como resultado da análise, idenfificamos as regras de associação entre os top_10 produtos mais frequentes na lista de compras de clientes, do site em questão:
 
 
-![image](https://user-images.githubusercontent.com/96034581/218281250-858cc153-fd0b-4946-912b-47768d6bb5a9.png)
+I - itens frequentes:
+
+![image](https://user-images.githubusercontent.com/96034581/225992647-a69b4033-e199-4b65-9bc5-e257875e683f.png)
+
+
+II -  Regras:
+
+![image](https://user-images.githubusercontent.com/96034581/225992257-6fc65ee0-e48f-458e-9561-32bb9c3f1a46.png)
+
+
+Informações relacionadas às vendas puderam ser visualizadas, brevemente, na fase exploratória:
+
+![image](https://user-images.githubusercontent.com/96034581/225992906-ad68b67e-3cc3-4479-a8a1-d16171b02450.png)
 
 
 
-Descartamos algumas, e verificamos a existência de relação linear entre as variáveis de interesse:
+![image](https://user-images.githubusercontent.com/96034581/225992964-4a82f6e1-7a8a-4f85-a629-36006c13445a.png)
 
 
-![image](https://user-images.githubusercontent.com/96034581/218281289-6d9c6ab3-0930-4ee7-b62b-af4c34a0cdae.png)
-
-
-Vimos que, o algortmo de agrupamento aplicado descartou as impressões iniciais, sobre a existência de dois grupos:
-
-![image](https://user-images.githubusercontent.com/96034581/218281337-41ac7eaf-f309-4786-974b-062ef0ae730b.png)
-
-Ao fina, verificamos que, a assimetria da das variáveis de interesse é tamanha, que interefere na validação das suposições do modelo de regressão linear:
-
-![image](https://user-images.githubusercontent.com/96034581/218281381-1503323d-c428-405d-a941-302274ac5506.png)
-
-Por fim, aplicamos algumas técnicas matemáticas, visando a normalização da distribuição destas variáveis, e, decidmos dar seguimento ao trabalho em uma nova branch, tendo em vista as alterações que se fazem necessárias, no código:
-
-![image](https://user-images.githubusercontent.com/96034581/218281416-d7e20e9e-51c1-447d-9f01-0c8f6c309a89.png)
-
+![image](https://user-images.githubusercontent.com/96034581/225993103-08560cb5-7c5c-4860-b18f-ddae9c81d124.png)
 
 
 ## Conclusão
 
 
 
-Realizando alguns agrupamentos e sumarização dos dados, e analisando as saída do modelo aplicaco, pode-se perceber que, a distribuição dos resíduos não chega nem perto de uma distribuição normal, e, quando relacionados à variável alvo, percebe-se que os coeficientes estão completamente enviezados.
-
-Nosso modelo preditivo está bem modelado (as variáveis parecem atender ao objetivos, e possuem relação linear), mas, teremos que aplicar alguma técnica matemática para normalizar a distruição dos atributos escolhidos, sem perda ou alteração de informação, o que será feito em um segundo momento.
-
+Como resultado, temos um arquivo contendo a regra mais forte para cada um dos itens mais frequentes da nossa base de dados. Estas informações podem fomentar, por exemplo, e-mails marketing ou recomendações on-line.
 
 ## Referências
 
@@ -102,6 +94,4 @@ Nosso modelo preditivo está bem modelado (as variáveis parecem atender ao obje
 Fonte dos dados: 
 
 
-1 - [kaggle](https://www.kaggle.com/datasets/rubenssjr/brasilian-houses-to-rent)
-
-2 - Repositório do Cientista de Dados Franklin Ferreira: https://franklin390.github.io/Project_03_Netflix_Investor_Quarterly_Earnings/
+1 - [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx).
